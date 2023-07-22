@@ -1,0 +1,81 @@
+<ion-header>
+  <ion-toolbar color="secondary">
+    <ion-buttons slot="start" class="back-button">
+      <ion-back-button defaultHref="/list" text=""></ion-back-button>
+    </ion-buttons>
+    <ion-title>
+      Add Your Lost Pet's Info
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div class="content-wrapper">
+    <div class="row">
+      <div class="col-4">
+        <ion-item>
+          <ion-label position="floating">Add Your Pet's Name:</ion-label>
+          <ion-input [(ngModel)]="pet.name" clearInput></ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-label position="floating">Add Your Pet's Collar's Color:</ion-label>
+          <ion-input [(ngModel)]="pet.collar" clearInput></ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-label position="floating">Add Your Pet's Unique Information:</ion-label>
+          <ion-input [(ngModel)]="pet.info" clearInput></ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-label position="floating">Add Your Address:</ion-label>
+          <ion-input [(ngModel)]="pet.address" clearInput></ion-input>
+        </ion-item>
+      </div>
+      <div class="col-4">
+        <ion-item>
+          <ion-label position="floating">Add Your Pet's Specie:</ion-label>
+          <ion-input [(ngModel)]="pet.type" clearInput></ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-label position="floating">Add Your Pet's Age:</ion-label>
+          <ion-input type="number" [(ngModel)]="pet.age" clearInput></ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-label position="floating">Add Your Pet's Lost Date:</ion-label>
+          <ion-input type="date" [(ngModel)]="pet.lostDate" clearInput></ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-label position="floating">Add Your Phone Number:</ion-label>
+          <ion-input type="tel" [(ngModel)]="pet.mobile" clearInput></ion-input>
+        </ion-item>
+      </div>
+      <div class="col-4">
+        <ion-item>
+          <ion-label position="floating">Add Your Pet's Breed:</ion-label>
+          <ion-input [(ngModel)]="pet.petType" clearInput></ion-input>
+        </ion-item>
+        <p> </p>
+        <ion-item>
+          <p>Image:</p>
+          <ion-label position="floating" class="hidden-label"></ion-label>
+          <input type="file" (change)="onImageSelected($event)" accept="image/*">
+          <p> </p>
+        </ion-item>             
+        <ion-item>
+          <ion-label position="floating">Add Your Pet's Last Seen Place:</ion-label>
+          <ion-input [(ngModel)]="pet.lastSeen" clearInput></ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-label position="floating">Add Your Email:</ion-label>
+          <ion-input [(ngModel)]="pet.email" clearInput></ion-input>
+        </ion-item>
+      </div>
+    </div>
+
+    <div style="display: flex; justify-content: center; padding-top: 10px;">
+      <ion-button expand="full" shape="round" (click)="onSubmit()" color="secondary">
+        <ion-icon name="add-circle-outline"></ion-icon>
+        Add Pet
+      </ion-button>
+    </div>
+  </div>
+</ion-content>

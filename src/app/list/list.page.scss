@@ -1,0 +1,58 @@
+.image-class {
+  width: 400px;
+  height: 400px; 
+}
+
+.image-container-class {
+  display: flex;
+  align-items: center;
+}  
+.card-content {
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+}
+
+.card-header {
+  padding-bottom: 0.5rem; /* Adjust the value as needed */
+}
+
+.card-content {
+  padding-top: 0.5rem; /* Adjust the value as needed */
+}
+
+.icon-container {
+  display: flex;
+  align-items: center;
+}
+
+.icon {
+  font-size: 24px; /* Adjust the size as needed */
+  margin-right: 0.5rem; /* Adjust the spacing as needed */
+}
+
+.tab-button-text {
+  font-size: 16px; /* Adjust the size as needed */
+  white-space: nowrap;
+}  
+  
+.add-pet-container {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  padding: 10px;
+  background-color: #fff;
+  z-index: 9999;
+}
+
+.add-pet-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  --background: #3dc2ff;
+}
+
+.add-pet-button ion-icon {
+  margin-bottom: 2px; /* Adjust the value as needed */
+}
+

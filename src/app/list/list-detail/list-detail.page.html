@@ -1,0 +1,99 @@
+<ion-header [translucent]="true">
+  <ion-toolbar color="secondary">
+    <ion-buttons slot="start" class="back-button">
+      <ion-back-button defaultHref="/list" text=""></ion-back-button>
+    </ion-buttons>
+    <div>
+      <h1>Full Information</h1>
+    </div>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-list class="custom-list">
+    <ion-item lines="none" class="image-item">
+      <div class="image-container">
+        <ion-img [src]="loadedPet?.image"></ion-img>
+      </div>
+    </ion-item>
+
+    <ion-item>
+      <ion-label class="ion-text-wrap">
+        <h4>Name:</h4>
+        <p>{{ loadedPet?.name }}</p>
+    </ion-label>
+    </ion-item>
+
+
+    <ion-item>
+      <ion-label class="ion-text-wrap">
+        <h4>Age:</h4>
+        <p>{{ loadedPet?.age }}</p>
+    </ion-label>
+    </ion-item>
+
+    <ion-item>
+      <ion-label class="ion-text-wrap">
+        <h4>Unique Information:</h4>
+        <p>{{ loadedPet?.info }}</p>
+    </ion-label>
+    </ion-item>
+
+    <ion-item>
+      <ion-label class="ion-text-wrap">
+        <h4>Lost Date:</h4>
+        <p>{{ loadedPet?.lostDate }}</p>
+      </ion-label>
+    </ion-item>    
+
+    <ion-item>
+      <ion-label class="ion-text-wrap">
+        <h4>Last Seen Address:</h4>
+        <p>{{ loadedPet?.lastSeen }}</p>
+    </ion-label>
+    </ion-item>
+
+    <ion-item>
+      <ion-label class="ion-text-wrap">
+        <h4>Specie:</h4>
+        <p>{{ loadedPet?.type }}</p>
+    </ion-label>
+    </ion-item>
+
+    <ion-item>
+      <ion-label class="ion-text-wrap">
+        <h4>Breed:</h4>
+        <p>{{ loadedPet?.petType }}</p>
+    </ion-label>
+    </ion-item>
+
+    <ion-item>
+      <ion-label class="ion-text-wrap">
+        <h4>Collar:</h4>
+        <p>{{ loadedPet?.collar }}</p>
+    </ion-label>
+    </ion-item>
+
+    <ion-item>
+      <ion-label class="ion-text-wrap">
+      <h4>Owner's Address: </h4>
+      <p>{{ loadedPet?.address }}</p>
+    </ion-label>
+    </ion-item>
+
+    <ion-item>
+      <ion-label class="ion-text-wrap">
+      <h4>Owner's Phone Number:</h4>
+      <p>{{ loadedPet?.mobile }}</p>
+    </ion-label>
+    </ion-item>
+
+    <ion-item>
+      <ion-label class="ion-text-wrap">
+      <h4>Owner's Email:</h4>
+      <p>{{ loadedPet?.email }}</p>
+    </ion-label>
+    </ion-item>
+  </ion-list>
+</ion-content>
+

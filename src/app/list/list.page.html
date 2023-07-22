@@ -1,0 +1,27 @@
+<ion-header>
+  <ion-toolbar color="secondary" style="height: 60px; display: flex; align-items: center;">
+    <ion-title style="font-size: 24px;"><ion-icon name="paw-outline"></ion-icon> Wanted Pets!</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-list>
+    <ion-card *ngFor="let pet of pets" [routerLink]="['/list', pet.id]" class="image-container-class">
+      <ion-img [src]="pet.image" class="image-class"></ion-img>
+      <ion-card-header class="card-header">
+        <ion-card-title>Name: {{ pet.name }}</ion-card-title>
+      </ion-card-header>
+    
+      <ion-card-content class="card-content">
+        <p class="content"><strong>Lost Day:</strong>{{ pet.lostDate }}</p>
+        <p class="content"><strong>Last Seen Place: </strong>{{ pet.lastSeen }}</p>
+      </ion-card-content>
+    </ion-card>    
+  </ion-list>
+  <div class="add-pet-container">
+    <ion-button expand="full" shape="round" [routerLink]="['/list', 'form']" color="secondary">
+      <ion-icon name="add-circle-outline"></ion-icon>
+      Add Pet
+    </ion-button>
+  </div>
+</ion-content>

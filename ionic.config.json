@@ -1,0 +1,7 @@
+{
+  "name": "Ion-Ang-course",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
